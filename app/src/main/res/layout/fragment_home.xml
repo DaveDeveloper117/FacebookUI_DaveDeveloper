@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/usrFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_baseline_person_24"
+                    app:elevation="0dp"
+                    app:fabSize="mini"
+                    app:tint="@android:color/darker_gray" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/newPostField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_alignTop="@+id/photoBtn"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@+id/photoBtn"
+                    android:layout_toEndOf="@+id/usrFab"
+                    android:hint="What's on your mind"
+                    app:boxCornerRadiusBottomEnd="24dp"
+                    app:boxCornerRadiusBottomStart="24dp"
+                    app:boxCornerRadiusTopEnd="24dp"
+                    app:boxCornerRadiusTopStart="24dp"
+                    app:hintTextColor="@color/black"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/photoBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:padding="10dp"
+                    app:backgroundTint="@android:color/transparent"
+                    app:elevation="0dp"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_photo"
+                    app:tint="#45bd62" />
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/teal_200"
+                android:scrollbarSize="0dp">
+
+                <LinearLayout
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:id="@+id/newContent"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/reelBtn"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="Reel"
+                        android:layout_margin="5dp"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:textColor="@color/black"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_reel"
+                        app:iconTint="@android:color/holo_red_light"
+                        app:strokeColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/roomBtn"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="Room"
+                        android:layout_margin="5dp"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:textColor="@color/black"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_room"
+                        app:iconTint="@android:color/holo_purple"
+                        app:strokeColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/groupBtn"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="Group"
+                        android:layout_margin="5dp"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:textColor="@color/black"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_group"
+                        app:iconTint="@color/blue_500"
+                        app:strokeColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/liveBtn"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="Live"
+                        android:layout_margin="5dp"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:textColor="@color/black"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_live"
+                        app:iconTint="@android:color/holo_red_light"
+                        app:strokeColor="@android:color/darker_gray" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:orientation="horizontal"
+                android:background="@android:color/darker_gray"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/storiesPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/usrStory"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/usrPhoto"
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/materialDivider"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:elevation="0dp"
+                                app:dividerColor="@android:color/darker_gray"
+                                app:layout_constraintEnd_toEndOf="@+id/usrPhoto"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/usrPhoto" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@color/teal_400"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                app:layout_constraintTop_toBottomOf="@+id/materialDivider"
+                                tools:layout_editor_absoluteX="30dp">
+                                <!-- Title, secondary and supporting text -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="bottom"
+                                    android:text="Create story"
+                                    android:textAppearance="?attr/textAppearanceCaption" />
+                            </LinearLayout>
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:id="@+id/searchBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:backgroundTint="@color/blue_700"
+                                app:backgroundTint="@color/teal_400"
+                                app:borderWidth="3dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini"
+                                app:layout_constraintBottom_toBottomOf="@+id/materialDivider"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/materialDivider"
+                                app:srcCompat="@drawable/ic_baseline_add_24"
+                                app:tint="@android:color/white"
+                                tools:ignore="DuplicateSpeakableTextCheck" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="120dp"
+                        android:id="@+id/storyOne"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/usrStory"
+                        android:layout_alignBottom="@+id/usrStory"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@+id/usrStory"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/img_exm_1" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@android:color/darker_gray"
+                                app:backgroundTint="@color/blue_700"
+                                app:borderWidth="3dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_person_24"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:layout_margin="10dp"
+                                android:text="Gladys Ross"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/storyTwo"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/usrStory"
+                        android:layout_alignBottom="@+id/usrStory"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@+id/storyOne"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/img_exm_2" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@android:color/darker_gray"
+                                app:backgroundTint="@color/blue_700"
+                                app:borderWidth="3dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_person_24"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:layout_margin="10dp"
+                                android:text="Harry Ross"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/storyThree"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/usrStory"
+                        android:layout_alignBottom="@+id/usrStory"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@+id/storyTwo"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/img_exm_3" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@android:color/darker_gray"
+                                app:backgroundTint="@color/blue_700"
+                                app:borderWidth="3dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_person_24"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:layout_margin="10dp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Anna Miller"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/storyFour"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/usrStory"
+                        android:layout_alignBottom="@+id/usrStory"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@+id/storyThree"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/img_exm_4" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@android:color/darker_gray"
+                                app:backgroundTint="@color/blue_700"
+                                app:borderWidth="3dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_person_24"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:layout_margin="10dp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Angie Holtz"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/storyFive"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/usrStory"
+                        android:layout_alignBottom="@+id/usrStory"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@+id/storyFour"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/img_exm_5" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@android:color/darker_gray"
+                                app:backgroundTint="@color/blue_700"
+                                app:borderWidth="3dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_person_24"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:layout_margin="10dp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="James Bosworth"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/storySix"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/usrStory"
+                        android:layout_alignBottom="@+id/usrStory"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@+id/storyFive"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/img_exm_6" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@android:color/darker_gray"
+                                app:backgroundTint="@color/blue_700"
+                                app:borderWidth="3dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_person_24"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:layout_margin="10dp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Dorothy Tarango"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/storySeven"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/usrStory"
+                        android:layout_alignBottom="@+id/usrStory"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@+id/storySix"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/img_exm_7" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@android:color/darker_gray"
+                                app:backgroundTint="@color/blue_700"
+                                app:borderWidth="3dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_person_24"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:layout_margin="10dp"
+                                android:text="Clara Tanner"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/storyEight"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/usrStory"
+                        android:layout_alignBottom="@+id/usrStory"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@+id/storySeven"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/img_exm_8" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@android:color/darker_gray"
+                                app:backgroundTint="@color/blue_700"
+                                app:borderWidth="3dp"
+                                app:elevation="0dp"
+                                app:fabSize="mini"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_baseline_person_24"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:layout_margin="10dp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Lee Ochoa"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:orientation="horizontal"
+                android:background="@android:color/darker_gray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@android:color/darker_gray"
+                    app:backgroundTint="@color/blue_700"
+                    app:borderWidth="3dp"
+                    app:elevation="0dp"
+                    app:fabSize="mini"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_person_24"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    app:layout_constraintTop_toTopOf="@+id/floatingActionButton" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Fri at 2:58 PM  · "
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="0dp"
+                    android:cropToPadding="true"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_resource_public"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="@+id/textView2"
+                    app:tint="@android:color/darker_gray" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_close_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+                    app:tint="@android:color/darker_gray" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_dots"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+                    app:tint="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/descJoe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac sodales leo. Morbi eu justo pulvinar ex vestibulum vulputate. Sed ligula diam, tempus eget felis id, tempus lobortis dolor."
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
+
+                <ImageView
+                    android:id="@+id/photoJoe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/food"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descJoe" />
+
+                <ImageView
+                    android:id="@+id/likeJoe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_like"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/photoJoe" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_love"
+                    app:layout_constraintStart_toEndOf="@+id/likeJoe"
+                    app:layout_constraintTop_toBottomOf="@+id/photoJoe" />
+
+                <TextView
+                    android:id="@+id/reactJoe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="1.6K"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="50 comments · 114 shares"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/likeJoe"
+                    tools:layout_editor_absoluteX="0dp">
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Like"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@android:color/darker_gray"
+                    app:icon="@drawable/ic_reaction"
+                    app:iconTint="@android:color/darker_gray"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comment"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@android:color/darker_gray"
+                    app:icon="@drawable/ic_comment"
+                    app:iconTint="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/button"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toTopOf="@+id/button" />
+
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@android:color/darker_gray"
+                    app:icon="@drawable/ic_share"
+                    app:iconTint="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/button2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline9"
+                    app:layout_constraintTop_toTopOf="@+id/button2" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.333" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.66" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:orientation="horizontal"
+                android:background="@android:color/darker_gray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@android:color/darker_gray"
+                    app:backgroundTint="@color/blue_700"
+                    app:borderWidth="3dp"
+                    app:elevation="0dp"
+                    app:fabSize="mini"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_person_24"
+                    app:tint="@android:color/white"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jane Doe"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Wed at 12:54 PM  · "
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="0dp"
+                    android:cropToPadding="true"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_resource_public"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="@+id/textView2"
+                    app:tint="@android:color/darker_gray" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_close_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+                    app:tint="@android:color/darker_gray"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_dots"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+                    app:tint="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/descJoe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Duis at libero euismod, dignissim felis sit amet, eleifend nisi. Etiam dapibus volutpat ex. Donec ut finibus lacus. Morbi maximus tortor mi, non dignissim elit faucibus et."
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageView
+                    android:id="@+id/photoJoe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hiking"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descJoe"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageView
+                    android:id="@+id/likeJoe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_like"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/photoJoe"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_love"
+                    app:layout_constraintStart_toEndOf="@+id/likeJoe"
+                    app:layout_constraintTop_toBottomOf="@+id/photoJoe"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/reactJoe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="2.4K"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="@+id/imageView4"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="50 comments · 114 shares"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/likeJoe"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:ignore="DuplicateIds">
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Like"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@android:color/darker_gray"
+                    app:icon="@drawable/ic_reaction"
+                    app:iconTint="@android:color/darker_gray"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    tools:ignore="DuplicateIds" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comment"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@android:color/darker_gray"
+                    app:icon="@drawable/ic_comment"
+                    app:iconTint="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/button"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toTopOf="@+id/button"
+                    tools:ignore="DuplicateIds" />
+
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@android:color/darker_gray"
+                    app:icon="@drawable/ic_share"
+                    app:iconTint="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/button2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline9"
+                    app:layout_constraintTop_toTopOf="@+id/button2" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.333"
+                    tools:ignore="DuplicateIds" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.66"
+                    tools:ignore="DuplicateIds" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

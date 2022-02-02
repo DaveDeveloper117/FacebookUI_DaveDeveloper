@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GamingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:padding="8dp"
+                android:text="Gaming"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/personFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toStartOf="@+id/searchFab"
+                android:src="@drawable/ic_baseline_person_24"
+                app:elevation="0dp"
+                app:fabSize="mini"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/searchFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_baseline_search_24"
+                app:elevation="0dp"
+                app:fabSize="mini" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="For you"
+                    android:layout_marginStart="8dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textColor="@color/blue_700"
+                    android:backgroundTint="#e3f3fe"
+                    app:cornerRadius="16dp"
+                    app:strokeColor="#e3f3fe"
+                    app:strokeWidth="0dp"/>
+
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Play"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:cornerRadius="16dp"
+                    app:strokeWidth="0dp"/>
+
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:cornerRadius="16dp"
+                    app:strokeWidth="0dp"/>
+
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Communities"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:cornerRadius="16dp"
+                    app:strokeWidth="0dp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <com.google.android.material.divider.MaterialDivider
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginEnd="8dp"/>
+
+           </LinearLayout>
+
+       </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="Recent Activity" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="See all" />
+
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:scrollbarSize="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:backgroundTint="@color/black"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/gaming"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/black"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gaming"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:backgroundTint="@color/black"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/gaming"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/black"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gaming"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:backgroundTint="@color/black"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/gaming"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/black"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gaming"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:backgroundTint="@color/black"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/gaming"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/black"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gaming"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:backgroundTint="@color/black"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/gaming"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/black"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gaming"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:backgroundTint="@color/black"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/gaming"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/black"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gaming"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:backgroundTint="@color/black"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/gaming"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/black"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gaming"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:backgroundTint="@color/black"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/gaming"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/black"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gaming"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:backgroundTint="@color/black"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/gaming"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/black"
+                                android:textAppearance="?attr/textAppearanceCaption"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gaming"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerInsetStart="8dp"
+                    app:dividerInsetEnd="8dp"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:scrollbarSize="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_margin="8dp"
+                                android:backgroundTint="@color/white"
+                                android:foreground="@drawable/ic_followed"
+                                app:borderWidth="0dp"
+                                app:elevation="0dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/gaming" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/gaming" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/gaming" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/gaming" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/gaming" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/gaming" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/gaming" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                app:cardElevation="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="100dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/gaming" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerThickness="8dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@android:color/darker_gray"
+                        app:backgroundTint="@color/blue_700"
+                        app:borderWidth="3dp"
+                        app:elevation="0dp"
+                        app:fabSize="mini"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_person_24"
+                        app:tint="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jane Doe"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                        app:layout_constraintTop_toTopOf="@+id/floatingActionButton" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="May 4, 2021  · "
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="0dp"
+                        android:cropToPadding="true"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_resource_public"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                        app:layout_constraintStart_toEndOf="@+id/textView2"
+                        app:layout_constraintTop_toTopOf="@+id/textView2"
+                        app:tint="@android:color/darker_gray" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_baseline_close_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+                        app:tint="@android:color/darker_gray" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_dots"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+                        app:tint="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/descJoe"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Maecenas vel felis vulputate, scelerisque magna non, convallis lorem. Aenean luctus lectus eu aliquet rutrum. Proin consequat tellus a velit vehicula, at iaculis eros placerat."
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
+
+                    <ImageView
+                        android:id="@+id/photoJoe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gameplay"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/descJoe" />
+
+                    <ImageView
+                        android:id="@+id/likeJoe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_like"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/photoJoe" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_love"
+                        app:layout_constraintStart_toEndOf="@+id/likeJoe"
+                        app:layout_constraintTop_toBottomOf="@+id/photoJoe" />
+
+                    <TextView
+                        android:id="@+id/reactJoe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="17K"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        app:layout_constraintStart_toEndOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="496 comments · 2.2K shares · 12M Views"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/likeJoe"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/button"
+                        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Like"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="@android:color/darker_gray"
+                        app:icon="@drawable/ic_reaction"
+                        app:iconTint="@android:color/darker_gray"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="@android:color/darker_gray"
+                        app:icon="@drawable/ic_comment"
+                        app:iconTint="@android:color/darker_gray"
+                        app:layout_constraintBottom_toBottomOf="@+id/button"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                        app:layout_constraintStart_toStartOf="@+id/guideline8"
+                        app:layout_constraintTop_toTopOf="@+id/button" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="@android:color/darker_gray"
+                        app:icon="@drawable/ic_share"
+                        app:iconTint="@android:color/darker_gray"
+                        app:layout_constraintBottom_toBottomOf="@+id/button2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline9"
+                        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.333" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.66" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NotificationFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/searchFab"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="Notifications"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/searchFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_baseline_search_24"
+                app:elevation="0dp"
+                app:fabSize="mini" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Earlier"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="start"
+                    android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/usrFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:elevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintEnd_toStartOf="@+id/dotsFab"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toTopOf="@+id/usrFab" />
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Mon at 12:05 PM"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toBottomOf="@+id/textDesc" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/dotsFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_more_horiz_24"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp"
+                        app:fabCustomSize="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textDesc"
+                        app:tint="@android:color/darker_gray" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/usrFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:elevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Etiam laoreet justo ipsum, ac consectetur eros rutrum eu. "
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintEnd_toStartOf="@+id/dotsFab"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toTopOf="@+id/usrFab"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Jan 28 at 07:01 PM"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toBottomOf="@+id/textDesc"
+                        tools:ignore="DuplicateIds" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/dotsFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_more_horiz_24"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp"
+                        app:fabCustomSize="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textDesc"
+                        app:tint="@android:color/darker_gray"
+                        tools:ignore="DuplicateIds" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/usrFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:elevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Quisque pharetra enim ligula, sit amet sodales orci euismod eu."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintEnd_toStartOf="@+id/dotsFab"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toTopOf="@+id/usrFab"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Jan 27 at 07:50 PM"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toBottomOf="@+id/textDesc"
+                        tools:ignore="DuplicateIds" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/dotsFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_more_horiz_24"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp"
+                        app:fabCustomSize="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textDesc"
+                        app:tint="@android:color/darker_gray"
+                        tools:ignore="DuplicateIds" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/usrFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:elevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Nunc sed convallis nisi, vel aliquam enim. Aliquam sit amet risus libero."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintEnd_toStartOf="@+id/dotsFab"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toTopOf="@+id/usrFab"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Jan 27 at 02:05 AM"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toBottomOf="@+id/textDesc"
+                        tools:ignore="DuplicateIds" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/dotsFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_more_horiz_24"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp"
+                        app:fabCustomSize="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textDesc"
+                        app:tint="@android:color/darker_gray"
+                        tools:ignore="DuplicateIds" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/usrFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:elevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Nunc vestibulum erat ac ultricies mollis."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintEnd_toStartOf="@+id/dotsFab"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toTopOf="@+id/usrFab"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Jan 25 at 10:05 AM"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toBottomOf="@+id/textDesc"
+                        tools:ignore="DuplicateIds" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/dotsFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_more_horiz_24"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp"
+                        app:fabCustomSize="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textDesc"
+                        app:tint="@android:color/darker_gray"
+                        tools:ignore="DuplicateIds" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/usrFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:elevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Phasellus vestibulum leo ut nisi viverra, sit amet lobortis urna tempus."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintEnd_toStartOf="@+id/dotsFab"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toTopOf="@+id/usrFab"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Jan 24 at 11:25 PM"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toBottomOf="@+id/textDesc"
+                        tools:ignore="DuplicateIds" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/dotsFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_more_horiz_24"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp"
+                        app:fabCustomSize="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textDesc"
+                        app:tint="@android:color/darker_gray"
+                        tools:ignore="DuplicateIds" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/usrFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:elevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Ut sed elit ipsum. Aliquam ut ex tristique, condimentum arcu vitae, mollis dolor."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintEnd_toStartOf="@+id/dotsFab"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toTopOf="@+id/usrFab"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Jan 24 at 05:38 PM"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toBottomOf="@+id/textDesc"
+                        tools:ignore="DuplicateIds" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/dotsFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_more_horiz_24"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp"
+                        app:fabCustomSize="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textDesc"
+                        app:tint="@android:color/darker_gray"
+                        tools:ignore="DuplicateIds" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/usrFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:elevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Vestibulum nec blandit velit, sed iaculis enim."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintEnd_toStartOf="@+id/dotsFab"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toTopOf="@+id/usrFab"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Jan 23 at 08:44 AM"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        app:layout_constraintStart_toEndOf="@+id/usrFab"
+                        app:layout_constraintTop_toBottomOf="@+id/textDesc"
+                        tools:ignore="DuplicateIds" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/dotsFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_more_horiz_24"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp"
+                        app:fabCustomSize="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textDesc"
+                        app:tint="@android:color/darker_gray"
+                        tools:ignore="DuplicateIds" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>
